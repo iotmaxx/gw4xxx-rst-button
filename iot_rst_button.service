@@ -1,0 +1,13 @@
+[Unit]
+Description=Python IoTmaxx reset button handler
+
+[Service]
+Type=simple
+# Command to execute when the service is started
+ExecStart=/usr/bin/python3 -m iot_rst_button
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+
